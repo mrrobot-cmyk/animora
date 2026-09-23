@@ -1,0 +1,12 @@
+# Abhängigkeiten und Builds
+node_modules/
+dist/
+release/
+release-*/
+
+# mpv-Binärdateien (mpv.exe ist größer als GitHubs 100-MB-Grenze, siehe mpv/README.md)
+mpv/*
+!mpv/README.md
+
+# Protokolle
+*.log

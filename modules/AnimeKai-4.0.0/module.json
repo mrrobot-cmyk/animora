@@ -1,0 +1,54 @@
+{
+  "id": "animekai-v2",
+  "name": "AnimeKai",
+  "contentType": "video",
+  "contractVersion": 4,
+  "moduleVersion": "4.0.0",
+  "description": "AnimeKai (animekai.be). English sub/dub via MegaPlay HLS and 1anime MP4. DUB is returned only when a dub server exists — Japanese sub is never labeled dub.",
+  "moduleFamilyId": "animekai-v2",
+  "moduleIdentity": "SP-VID-005-ANIMEKAI",
+  "moduleIdentityNumber": 5,
+  "releaseTrack": "beta",
+  "moduleStatus": "trial",
+  "presentation": {
+    "category": "Anime",
+    "purpose": "English Anime",
+    "recommended": false,
+    "language": "English Sub/Dub",
+    "languages": ["sub", "dub"]
+  },
+  "config": {
+    "language": "English Sub/Dub",
+    "contentLanguage": "en",
+    "runtime": {
+      "entry": "index.js",
+      "mode": "local"
+    },
+    "capabilities": {
+      "discovery_v1": true
+    },
+    "caps": {
+      "homeMaxResults": 30,
+      "maxResponseBytes": 5242880,
+      "timeoutMs": 30000,
+      "maxConcurrentRequests": 4
+    },
+    "baseUrl": "https://animekai.be",
+    "streamHeaders": {
+      "Referer": "https://megaplay.buzz/",
+      "Origin": "https://megaplay.buzz",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+    },
+    "legacyModuleIds": [
+      "animekai",
+      "animekai_v2"
+    ],
+    "presentation": {
+      "category": "Anime",
+      "purpose": "English Anime",
+      "recommended": false,
+      "language": "English Sub/Dub",
+      "languages": ["sub", "dub"]
+    }
+  }
+}

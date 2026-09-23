@@ -1,0 +1,43 @@
+{
+  "id": "miruro-v3",
+  "name": "Miruro",
+  "contentType": "video",
+  "contractVersion": 4,
+  "moduleVersion": "4.0.1",
+  "description": "High-speed Anime streaming and discovery backed by AniList metadata and multi-provider high-reliability stream pipeline.",
+  "releaseTrack": "stable",
+  "moduleFamilyId": "miruro",
+  "moduleIdentity": "SP-VID-010-MIRURO",
+  "moduleIdentityNumber": 10,
+  "presentation": {
+    "category": "Anime",
+    "purpose": "Anime",
+    "recommended": false,
+    "language": "English Sub/Dub",
+    "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/miruro.png"
+  },
+  "config": {
+    "capabilities": {
+      "discovery_v1": true
+    },
+    "presentation": {
+      "category": "Anime",
+      "purpose": "Anime",
+      "recommended": false,
+      "language": "English Sub/Dub",
+      "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/miruro.png"
+    },
+    "runtime": {
+      "entry": "index.js",
+      "mode": "local"
+    },
+    "caps": {
+      "homeMaxResults": 30,
+      "maxResponseBytes": 5242880,
+      "timeoutMs": 30000,
+      "maxConcurrentRequests": 6
+    },
+    "baseUrl": "https://www.miruro.to"
+  },
+  "moduleStatus": "active"
+}

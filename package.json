@@ -1,0 +1,65 @@
+{
+  "name": "animora",
+  "productName": "Animora",
+  "version": "1.2.0",
+  "description": "Animora – Anime-App für Windows auf Basis von Synthetiq-Contract-V4-Modulen",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "main": "app/main.cjs",
+  "scripts": {
+    "start": "node web/server.mjs",
+    "web": "node web/server.mjs",
+    "dist:web": "node scripts/build-web.mjs",
+    "electron": "electron .",
+    "app": "electron .",
+    "icon": "electron scripts/make-icon.cjs",
+    "dist": "electron-builder --win portable --x64",
+    "list": "node src/cli.mjs list",
+    "search": "node src/cli.mjs search",
+    "details": "node src/cli.mjs details",
+    "episodes": "node src/cli.mjs episodes",
+    "stream": "node src/cli.mjs stream",
+    "discovery": "node src/cli.mjs discovery"
+  },
+  "engines": {
+    "node": ">=22.15"
+  },
+  "devDependencies": {
+    "electron": "^38.1.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "local.animora.app",
+    "productName": "Animora",
+    "directories": {
+      "output": "release-app"
+    },
+    "files": [
+      "app/**/*",
+      "src/**/*",
+      "modules/**/*",
+      "package.json"
+    ],
+    "asarUnpack": [
+      "src/**/*",
+      "modules/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "mpv",
+        "to": "mpv"
+      }
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "icon": "app/assets/icon.png"
+    },
+    "portable": {
+      "artifactName": "Animora.exe",
+      "unpackDirName": true
+    }
+  }
+}

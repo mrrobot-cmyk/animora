@@ -1,0 +1,543 @@
+{
+  "schemaVersion": 1,
+  "repositoryId": "synthetiq-official-modules",
+  "name": "Synthetiq Modules",
+  "enabled": true,
+  "defaultModules": {
+    "video": "anikoto-v4",
+    "image": "weebcentral-v2",
+    "music": "synthetiq-music-hub-v1"
+  },
+  "bundleVersion": 106,
+  "bundleFile": "bundles/Synthetiq-Module-Bundle-106.zip",
+  "minAppVersion": "8.0.0",
+  "modules": [
+    {
+      "file": "modules/YASTREAM-1.0.0.zip",
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Asian Movies & TV (Beta)",
+        "recommended": false,
+        "language": "Original audio / Subtitles",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/yastream.png"
+      },
+      "changelog": [
+        "1.0.0 beta: YASTREAM Asian catalogues, search, details, episodes, HLS streams and subtitles.",
+        "Flutter runtime and sampled live extraction verified. Full playback certification remains incomplete; device feedback requested.",
+        "Original audio with subtitles; dubbed streams are not supported."
+      ]
+    },
+    {
+      "file": "modules/DramaCool-1.0.1.zip",
+      "presentation": {
+        "category": "Drama",
+        "purpose": "Asian Drama (Korean / Chinese / Japanese)",
+        "recommended": true,
+        "language": "Korean / Asian",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/dramacool.png"
+      },
+      "changelog": [
+        "1.0.1: Fixed multi-server stream extraction (KissKH, VidHide, VidBasic, Vidmoly) for 2026 dramas",
+        "1.0.1: Scoped episode parsing and prevented genre leaks across all drama series",
+        "1.0.0: Official DramaCool (dramacool9.com.ro) Asian dramas, movies, and shows with English subtitles",
+        "1.0.0: Full Contract V4 discoveryHome and discoveryFeed support with carousels and paginated feeds"
+      ]
+    },
+    {
+      "file": "modules/YFlix-1.0.0.zip",
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Movies & TV Shows (HD Streams)",
+        "recommended": true,
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/yflix.png"
+      },
+      "changelog": [
+        "1.0.0: Official yFlix (yflix.ws) movies and TV series with adaptive 1080p/4K/720p HLS playback",
+        "1.0.0: Full Contract V4 discoveryHome with 7 carousels and paginated discoveryFeed",
+        "1.0.0: Relevance-boosted search engine with TV series and anime prioritization",
+        "1.0.0: Multi-season episode listings with sub & dub stream resolvers"
+      ]
+    },
+    {
+      "file": "modules/Anikoto-5.0.0.zip",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Anime",
+        "recommended": true,
+        "language": "English Sub/Dub",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/anikoto.png?v=20260812-2"
+      },
+      "changelog": [
+        "5.0.0: Owner-approved release of beta.14 with checked quality choices, including 1080p, 720p and 360p where supplied by the primary server.",
+        "5.0.0: Improved exact-episode fallback, bounded backup lookups and subtitle-route ordering; retains provider subtitle and marker metadata.",
+        "5.0.0: Source availability varies. Prior intermittent resolution and caption gaps remain; simulator certification is incomplete. This module update does not fix app-side saved-copy retry behavior.",
+        "4.0.8: Fixed One Piece Episode 1 and legacy title playback with automatic multi-provider fallback engine",
+        "4.0.8: Supported /stream/getSourcesNew endpoint with TikTok fake-image HLS detection",
+        "4.0.7: Enabled seamless playback for dub-only titles without manual audio track switching",
+        "4.0.6: Prioritized VidPlay and VidTube streams with 3000ms probe timeouts to eliminate player stalls from offline MegaPlay origins",
+        "4.0.5: Reject fake image-based HLS and invalid media before playback",
+        "4.0.5: Add exact-title and exact-episode fallback for unavailable Anikoto streams",
+        "4.0.5: Preserve requested sub or dub language without cross-show substitution"
+      ]
+    },
+    {
+      "file": "modules/Synthetiq-One-1.3.0.zip",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Fastest Anime",
+        "recommended": true,
+        "language": "English Dub",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/synthetiq.png?v=20260812-2"
+      },
+      "changelog": [
+        "Added the Fastest catalogue label",
+        "Runtime remains unchanged from 1.2.9"
+      ]
+    },
+    {
+      "file": "modules/Anikage-1.1.1.zip",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "English Anime (SUB / DUB)",
+        "recommended": true,
+        "language": "English Sub/Dub",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/anikage.png"
+      },
+      "changelog": [
+        "1.1.1: Owner-approved distribution of the unchanged testing package. Retains its beta label; not fully certified.",
+        "1.1.1: Checked server alternatives, recovered source-provided subtitle links and marker metadata where available; stop provider cascades during rate limits.",
+        "1.1.1: Long-distance seeks and downloads may remain slow. Some episodes fail resolution or decoding; audio-language and native seek certification remain incomplete. No app-code changes.",
+        "1.0.4: Added direct Otaku/Vidplay/Playmogo p.a.c.k.e.r embed deobfuscator & direct 1080p CDN HLS resolver with segment validation, fixing playback on Tower of God and other series",
+        "1.0.3: Prioritized Neko 1080p Backblaze B2 streams with live segment range probe validation",
+        "1.0.2: Built-in automatic HTTP 429 exponential backoff retry engine for flawless rapid browsing",
+        "1.0.1: Optimized browser session headers and Referer routing to prevent rate-limiting",
+        "1.0.1: Added full Contract V4 discoveryHome and extractHome exports for discovery carousels",
+        "1.0.1: Multi-provider failover across koto, kiwi, neko, wave, and megg stream hosts",
+        "1.0.0: Official Anikage (anikage.cc) comprehensive anime streaming catalogue with adaptive HD HLS resolution"
+      ]
+    },
+    {
+      "file": "modules/Synthetiq-Movies-1.2.3.zip",
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Most Reliable Movies",
+        "recommended": true,
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/synthetiq-movies.png?v=20260818-1"
+      },
+      "changelog": [
+        "1.2.3: Added direct stream variant ladder resolution for Stream Unity HLS playlists",
+        "1.2.3: Upgraded fallback resolver integration with OVH VideoEasy 4K brain cache",
+        "1.2.2: English, Spanish, Arabic and German are selectable without downloading every language",
+        "1.2.2: non-English subtitles are fetched only after the viewer selects a language",
+        "1.2.2: subtitle requests remain bounded to one verified track per language",
+        "1.2.2: discovery hero section remains capped at 8 items (contract compliance)",
+        "Keep ordinary anime and mature-rated films available",
+        "Do not invent languages when a title only has one verified source"
+      ]
+    },
+    {
+      "file": "modules/One-Pace-3.0.3-index-test.zip",
+      "presentation": {
+        "category": "Specialist",
+        "purpose": "One Piece",
+        "language": "English Sub/Dub",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/one-pace.png?v=20260812-2"
+      },
+      "changelog": [
+        "Reject DUB requests when an episode has no verified DUB route instead of silently playing subtitles",
+        "Prefer explicit language tags from individual files while preserving the existing episode catalogue",
+        "Preserved compatibility with previously saved onepace-index episode links",
+        "Retained separate sub/dub availability flags and multi-quality stream resolution"
+      ]
+    },
+    {
+      "file": "modules/AnimeHeaven-4.0.6.zip",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Anime",
+        "language": "English Sub",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/animeheaven.png?v=20260812-2"
+      },
+      "changelog": [
+        "4.0.6: Fixed episode list parsing for whitespace attribute variations and updated site markup",
+        "4.0.5: Episode lists restored for all titles after an AnimeHeaven markup change (Dandadan, A Wild Last Boss Appeared!, and more)",
+        "4.0.5: Decimal and special episode numbers supported, duplicates rejected, numeric ordering preserved",
+        "4.0.5: Clear upstream error messages when a title or stream is unavailable instead of silent empty results",
+        "Bundle 80 certified release"
+      ]
+    },
+    {
+      "file": "modules/X-Stream-1.2.2.zip",
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Movies & TV",
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/xstream.png"
+      },
+      "changelog": [
+        "1.2.2: English audio enforcement rejecting foreign & Spanish dub stream ladders and inspecting HLS audio track languages",
+        "1.2.1: ultra-fast parallel stream & quality resolution with in-flight request deduplication",
+        "1.2.1: verified 1080p/4K HLS and genuine media validation across Videasy, LookMovie, Vidzee, Hubcloud, and MoviesAPI",
+        "1.2.1: robust LookMovie 480p and subtitle fallback for titles with expired CDN storage",
+        "1.2.0: replaced the suspended catalogue host with TMDB-backed home, search, discovery and endless feeds"
+      ]
+    },
+    {
+      "file": "modules/STCine-1.0.5.zip",
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Movies & TV",
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/stcine.png?v=20260812-2"
+      },
+      "changelog": [
+        "1.0.5: Filter future-dated catalogue records and restore released home-feed coverage",
+        "1.0.5: Add exact-title and compatible-year matching to prevent wrong provider titles",
+        "1.0.5: Preserve verified provider stream resolution and movie episode mapping"
+      ]
+    },
+    {
+      "file": "modules/Miruro-4.0.1.zip",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Anime",
+        "language": "English Sub/Dub",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/miruro.png"
+      },
+      "changelog": [
+        "4.0.1: Preserve the correct HLS or MP4 type and required headers for each resolved stream",
+        "4.0.0: Rebuilt on-device anime stream pipeline resolving Cloudflare bot walls and broken downloads",
+        "Direct multi-provider video stream resolution with verified MPEG-TS segments for seamless playback and downloads",
+        "Fast AniList GraphQL search, discovery feeds, and complete episode mapping with sub & dub support"
+      ]
+    },
+    {
+      "file": "modules/Anime-Sama-1.0.8.zip",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "French Anime",
+        "language": "French (VOSTFR / VF)",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/anime-sama.png"
+      },
+      "changelog": [
+        "1.0.8: Pre-resolve direct physical Sibnet storage CDN endpoints with followRedirects:false for instant MP4 downloads",
+        "1.0.8: Added Vidmoly HLS multi-host fallback for full series stream coverage",
+        "1.0.8: Official vertical portrait title covers and horizontal background banners for all anime"
+      ]
+    },
+    {
+      "file": "modules/An1me-1.0.11.zip",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Greek Anime",
+        "language": "Greek Sub/Dub",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/an1me.png?v=20260819-1"
+      },
+      "changelog": [
+        "1.0.11: Improve search fallback parsing, exact title ranking, aliases, pagination, and cover image extraction",
+        "1.0.10: Official Greek sub/dub anime catalogue from An1me.to",
+        "1.0.10: Latest One Piece episodes play when An1/Google are missing by keeping a probed WeTransfer file as last resort",
+        "1.0.10: Streams are labeled Greek (el); Google MP4 is preferred when it exists"
+      ]
+    },
+    {
+      "file": "modules/AnimeAV1-1.2.8.zip",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Spanish Anime",
+        "language": "Spanish (Castellano / Latino / VOSE)",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/animeav1.png?v=20260814-1"
+      },
+      "changelog": [
+        "1.2.8: Reject non-standard port 183 MP4Upload URLs that cause 60-second player timeouts on mobile/iOS",
+        "1.2.8: High-speed multi-source Spanish anime fallback with seekable HLS and multi-language subtitle tracks",
+        "1.2.7: Decimal and special episode support (e.g. 13.5, OVA 0.5) without truncation",
+        "1.2.7: Automatic retry with exponential backoff for transient CDN socket disconnects",
+        "1.2.7: Quote-agnostic embed unescaping and broad media format verification",
+        "1.2.6: Prefer StreamTape HTTPS MP4 (port 443) and drop Cloudflare-blocked Zilla .html HLS segments",
+        "1.2.6: Probe MP4 bytes before return; DUB and SUB stay separate; Spanish DUB is advertised when the episode has it",
+        "1.2.5: DUB and SUB never substitute for each other — missing language fails closed instead of playing the other track",
+        "1.2.3: Multi-host failover with verified H.264 direct MP4 and backup HLS stream resolution",
+        "1.2.3: Per-stream Referer headers for YourUpload direct downloads (418 MB full MP4)",
+        "1.2.3: Clean quality labels (1080p Audio Español / 1080p Sub Español) without empty brackets",
+        "1.2.3: Full anime movie support with Episode 0 detection and stream extraction"
+      ]
+    },
+    {
+      "file": "modules/Latanime-1.0.3.zip",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Spanish & Catalan Anime",
+        "language": "Spanish / Catalan",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/latanime.png"
+      },
+      "changelog": [
+        "1.0.3: Added Latanime Spanish and Catalan anime catalogue",
+        "Returns dubbed audio only; unavailable subtitles fail clearly instead of substituting audio",
+        "Flutter runtime, media decoding, and Spanish audio verification passed"
+      ]
+    },
+    {
+      "file": "modules/Kartoons-1.1.6.zip",
+      "presentation": {
+        "category": "Cartoons",
+        "purpose": "Childhood Cartoons & Anime",
+        "language": "Hindi / English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/kartoons.png?v=20260816-1"
+      },
+      "changelog": [
+        "1.1.6: Repackaged the unchanged 1.1.5 module with exactly one JSON manifest so updates install correctly",
+        "1.1.5: Preserved movie TMDB IDs in playable stream resolvers for Shin Chan and Doraemon movies",
+        "1.1.5: Added open multi-provider HD HLS streaming fallbacks for classic movies and anime",
+        "1.1.5: 74% automated playback verification pass rate across childhood classics",
+        "1.1.4: In-memory show details & episode caching reducing series card loading time from 8s to under 2.8s",
+        "1.1.4: Instant sub-millisecond episode list rendering (<1ms) across large franchises"
+      ]
+    },
+    {
+      "file": "modules/DramaFun-3.0.2.zip",
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Spanish Drama",
+        "language": "Spanish",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/dramafun.png?v=20260812-2"
+      },
+      "changelog": [
+        "Bundle 80 certified release"
+      ]
+    },
+    {
+      "file": "modules/ToonTales-3.0.0.zip",
+      "presentation": {
+        "category": "Specialist",
+        "purpose": "Cartoons",
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/toontales.png?v=20260812-2"
+      },
+      "changelog": [
+        "Bundle 80 certified release"
+      ]
+    },
+    {
+      "file": "modules/Ev01-1.0.4.zip",
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "Movies",
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/ev01.png?v=20260812-2"
+      },
+      "changelog": [
+        "Added Synthetiq One English subtitle fallback for supported TMDB titles",
+        "Preserved verified media and download routes",
+        "Handles parsed JSON consistently in the Flutter module runtime"
+      ]
+    },
+    {
+      "file": "modules/Aniworld-1.0.1.zip",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "German Anime",
+        "language": "German",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/aniworld.png?v=20260812-2"
+      },
+      "changelog": [
+        "Added Aniworld German anime catalogue (search, seasons, episodes, discovery)",
+        "VidMoly HLS with Deutsch / EN-Sub / DE-Sub audio routes",
+        "Search fallback forms for apostrophe and alternate-wording title misses",
+        "Passed Study Anime 98.5% (Grade A): TOP 30/30, MED 10/10, LOW 9/10"
+      ]
+    },
+    {
+      "file": "modules/MegaKino-1.0.3.zip",
+      "presentation": {
+        "category": "Movies",
+        "purpose": "German Movies & Series",
+        "recommended": false,
+        "language": "German",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/megakino.png"
+      },
+      "changelog": [
+        "1.0.3: German movie and series catalogue with GXPlayer and VOE adaptive HLS stream resolution",
+        "1.0.3: Discovery homepage with featured films and latest series carousels",
+        "1.0.3: German-dubbed audio stream validation and offline download support"
+      ]
+    },
+    {
+      "file": "modules/WeebCentral-4.1.10.zip",
+      "presentation": {
+        "category": "Manga",
+        "purpose": "Manga",
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/weebcentral.png?v=20260812-2"
+      },
+      "changelog": [
+        "Restored complete chapter lists through the Flutter JavaScript runtime",
+        "Keeps Home discovery on recently active titles with chapter-bearing exact IDs",
+        "Sorts Chapter and Act labels numerically, including decimal chapters",
+        "Verified Nura, Chainsaw Man and One Piece through the real Flutter image runtime"
+      ]
+    },
+    {
+      "file": "modules/Synthetiq-Manga-1.0.2.zip",
+      "presentation": {
+        "category": "Manga",
+        "purpose": "Fastest Manga",
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/synthetiq.png?v=20260812-2"
+      },
+      "changelog": [
+        "Added Synthetiq Manga to the official catalogue",
+        "Added the Fastest catalogue label",
+        "Stores and resolves page links only; it does not host images"
+      ]
+    },
+    {
+      "file": "modules/Atsu-4.0.3.zip",
+      "presentation": {
+        "category": "Manga",
+        "purpose": "Manga",
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/atsu.png?v=20260812-2"
+      },
+      "changelog": [
+        "Bundle 80 certified release"
+      ]
+    },
+    {
+      "file": "modules/Synthetiq-Music-Hub-1.1.0.zip",
+      "presentation": {
+        "category": "Music",
+        "purpose": "Music",
+        "language": "Multi-language",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/synthetiq.png?v=20260812-2"
+      },
+      "changelog": [
+        "Improved exact artist and track matching",
+        "Added verified full-length audio resolution and download support"
+      ]
+    },
+    {
+      "file": "modules/AnimeUnity-1.0.7.zip",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Italian Anime",
+        "language": "Italian",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/animeunity.png"
+      },
+      "changelog": [
+        "1.0.7: Fixed title resolution on Home / In Evidenza hero carousel (fixed undefined [ITA SUB] title display bug)",
+        "1.0.6: Keeps Italian SUB and genuine Italian DUB routes separate per title and never substitutes SUB for unavailable DUB",
+        "1.0.6: Improves exact title, season and media-type matching and treats unreleased or missing titles as unavailable",
+        "1.0.5: Rebuilt VixCloud adaptive HLS playlist resolution using the current player parameters and verified media segments",
+        "1.0.4: Stateless title query resolution for robust cross-session Italian DUB and SUB companion switching",
+        "1.0.3: Strict DUB availability verification ensuring genuine Italian voice audio and blocking false fallback to Japanese audio",
+        "1.0.2: Ultra-low-latency HLS adaptive streaming enabling instant seeking and zero stutter on pause/resume",
+        "1.0.2: Dynamic SUB and Italian DUB companion switching with true Italian audio",
+        "1.0.1: Resolved Flutter JsService nativeHttp JSON body decoding for home discovery and search",
+        "1.0.0: Initial AnimeUnity Italian anime streaming library release"
+      ]
+    },
+    {
+      "file": "modules/AnimeKai-4.0.0.zip",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "English Anime",
+        "language": "English Sub/Dub",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/animekai.png"
+      },
+      "changelog": [
+        "4.0.0: Added AnimeKai English anime source",
+        "Live media routes probed across a broad catalogue sweep",
+        "Published as a beta source; availability remains dependent on the upstream site"
+      ]
+    },
+    {
+      "file": "modules/KickAssAnime-4.0.3.zip",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "English Anime",
+        "language": "English Sub/Dub"
+      },
+      "changelog": [
+        "4.0.3: Official KickAssAnime (kaa.lt) English sub/dub catalogue",
+        "4.0.3: DUB is only shown when an English player or English HLS audio track exists",
+        "4.0.3: Japanese-only CatStream is never labeled as DUB (One Piece is SUB-only)",
+        "4.0.2: Featured home row, season duplicate collapse, subtitle URL repair",
+        "4.0.1: Full episode lists via fsearch and ja-JP/en-US APIs"
+      ]
+    },
+    {
+      "file": "modules/Shahiid-2.0.1.zip",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "Arabic Anime",
+        "language": "Arabic Sub/Dub",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/shahiid.png"
+      },
+      "changelog": [
+        "2.0.1: Fixed movie dub availability to accurately reflect sub-only titles (e.g. Look Back)",
+        "2.0.0: Full overhaul for restructured series, seasons, and dubbed seasons catalogue hierarchy",
+        "2.0.0: High-speed multi-mirror resolver with verified 1080p MP4 and master HLS streaming",
+        "2.0.0: Strict language isolation between Arabic subtitled and Arabic dubbed episodes",
+        "2.0.0: Full movie and standalone special extraction with season archive auto-recovery"
+      ]
+    },
+    {
+      "file": "modules/Mugiwara-1.0.4.zip",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "French Anime",
+        "language": "French (VOSTFR / VF)",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/mugiwara.png"
+      },
+      "changelog": [
+        "1.0.4: Restored missing titles across entire 1200+ catalogue in search and browse (e.g. Orb: On the Movements of the Earth)",
+        "1.0.4: Restored all anime poster cover images using official Mugiwara static CDN",
+        "1.0.4: Added Ansembed 1080p Master HLS stream fallback for removed Sibnet videos (e.g. Dan Da Dan)",
+        "1.0.4: Fixed multi-season episode resolution for Next.js serialized undefined script URLs",
+        "1.0.2: Clean canonical portrait posters across all anime (fixed One Piece heroines cover)",
+        "1.0.2: Synchronized dual SUB/DUB episode mapping starting at Episode 1 with zero offset",
+        "1.0.2: Full anime movies / films support (Her Blue Sky, Your Name, Look Back, Suzume, etc.)",
+        "1.0.2: Multi-mirror stream resolver with automatic fallback failover for deleted video hosts",
+        "1.0.2: Featured hero carousel and continuous endless scrolling across all discovery feeds",
+        "1.0.1: Fixed homepage discovery & search JSON decoding on mobile Flutter runtime",
+        "1.0.0: Official Mugiwara French anime streaming catalogue (VOSTFR / VF)"
+      ]
+    },
+    {
+      "file": "modules/JustAnime-1.0.0.zip",
+      "presentation": {
+        "category": "Anime",
+        "purpose": "English Anime (SUB / DUB)",
+        "language": "English Sub/Dub",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/justanime.png"
+      },
+      "changelog": [
+        "1.0.0: Official JustAnime (justanime.to) comprehensive anime streaming catalogue with high-speed direct MP4 and HLS video playback",
+        "1.0.0: Dual audio synchronization for SUB and DUB tracks across multiple resolvers (AnimeGG, AniNeko, MegaPlay)",
+        "1.0.0: AniList metadata integration, rich synopsis, episode descriptions, and thumbnails",
+        "1.0.0: Complete WebVTT subtitle tracks and chapter skip markers",
+        "1.0.0: Discovery feeds for Trending, Popular, and Recent anime releases"
+      ]
+    },
+    {
+      "file": "modules/StreamingUnity-1.0.4.zip",
+      "presentation": {
+        "category": "Movies & TV",
+        "purpose": "StreamingUnity Movies & TV",
+        "language": "English",
+        "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/streamingunity.png"
+      },
+      "changelog": [
+        "1.0.4: Fixed episode routing by using the current title ID plus episode ID iframe endpoint",
+        "1.0.4: Prevented unrelated Gravitas Ventures or Paramount media from being returned for One Piece episodes",
+        "1.0.4: Verified distinct episode 1 and episode 2 HLS routes for SUB and DUB",
+        "1.0.3: Added StreamingUnity movie and TV catalogue with home discovery, search, title details, and multi-season episode mapping",
+        "1.0.3: Added adaptive VixCloud HLS resolution with English SUB and verified Italian DUB routing",
+        "1.0.3: Exposed provider subtitle and audio-track metadata while preserving required playback headers"
+      ]
+    }
+  ]
+}

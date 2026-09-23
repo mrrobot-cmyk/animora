@@ -1,0 +1,41 @@
+{
+  "id": "anikage-v1",
+  "name": "Anikage",
+  "contentType": "video",
+  "contractVersion": 4,
+  "moduleVersion": "1.0.1",
+  "description": "Anikage (anikage.cc) comprehensive anime streaming catalogue with adaptive HD HLS streaming, dual SUB/DUB audio, multi-provider fallbacks, WebVTT subtitles, and intro/outro skip markers.",
+  "moduleFamilyId": "anikage_v1",
+  "moduleIdentity": "SP-VID-063-ANIKAGE",
+  "moduleIdentityNumber": 63,
+  "releaseTrack": "stable",
+  "moduleStatus": "active",
+  "presentation": {
+    "category": "Anime",
+    "purpose": "English Anime (SUB / DUB)",
+    "recommended": true,
+    "language": "English Sub/Dub",
+    "languages": ["sub", "dub"],
+    "iconUrl": "https://raw.githubusercontent.com/kas021/Synthetiq-Modules/main/assets/module-icons/anikage.png"
+  },
+  "config": {
+    "capabilities": {
+      "discovery_v1": true
+    },
+    "runtime": {
+      "entry": "index.js",
+      "mode": "local"
+    },
+    "caps": {
+      "homeMaxResults": 30,
+      "maxResponseBytes": 5242880,
+      "timeoutMs": 30000,
+      "maxConcurrentRequests": 4
+    },
+    "baseUrl": "https://anikage.cc",
+    "streamHeaders": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "Referer": "https://anikage.cc/"
+    }
+  }
+}

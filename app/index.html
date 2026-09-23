@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self'; script-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animora</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="titlebar">
+        <a class="brand" href="#/home" aria-label="Animora Startseite">
+          <img class="brand-mark" src="assets/logo.svg" alt="" />
+          <span class="brand-word">Animora</span>
+        </a>
+        <div class="history-buttons">
+          <button id="nav-back" class="icon-button" type="button" aria-label="Zurück" title="Zurück (Alt+←)" data-icon="back"></button>
+          <button id="nav-forward" class="icon-button" type="button" aria-label="Vorwärts" title="Vorwärts (Alt+→)" data-icon="forward"></button>
+        </div>
+        <button id="quick-search" class="quick-search" type="button"><span data-icon="search"></span><span class="quick-search-label">Anime suchen …</span><kbd>Strg K</kbd></button>
+        <label class="source-switch" title="Quelle für Startseite, Suche und Katalog">
+          <span class="source-label">Quelle</span>
+          <select id="source-select" aria-label="Quelle"></select>
+        </label>
+      </header>
+
+      <nav class="sidebar" aria-label="Hauptnavigation">
+        <a class="nav-item" href="#/home" data-route="home"><span data-icon="home"></span><span class="nav-label">Home</span></a>
+        <a class="nav-item" href="#/search" data-route="search"><span data-icon="search"></span><span class="nav-label">Suche</span></a>
+        <a class="nav-item" href="#/browse" data-route="browse"><span data-icon="compass"></span><span class="nav-label">Entdecken</span></a>
+        <a class="nav-item" href="#/list" data-route="list"><span data-icon="bookmark"></span><span class="nav-label">Meine Liste</span><span id="list-count" class="nav-count" hidden></span></a>
+        <a class="nav-item" href="#/history" data-route="history"><span data-icon="history"></span><span class="nav-label">Verlauf</span></a>
+        <div class="nav-spacer"></div>
+        <a class="nav-item" href="#/settings" data-route="settings"><span data-icon="settings"></span><span class="nav-label">Einstellungen</span></a>
+      </nav>
+
+      <main id="view" class="view" tabindex="-1"></main>
+
+      <section id="now-playing" class="now-playing" aria-label="Aktuelle Wiedergabe" hidden></section>
+      <div id="toasts" class="toasts" aria-live="polite"></div>
+    </div>
+
+    <script src="js/core.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/pages/home.js"></script>
+    <script src="js/pages/search.js"></script>
+    <script src="js/pages/browse.js"></script>
+    <script src="js/pages/detail.js"></script>
+    <script src="js/pages/library.js"></script>
+    <script src="js/pages/settings.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
