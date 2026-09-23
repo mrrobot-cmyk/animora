@@ -1,7 +1,7 @@
 {
   "name": "animora",
   "productName": "Animora",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Animora – Anime-App für Windows auf Basis von Synthetiq-Contract-V4-Modulen",
   "license": "MIT",
   "private": true,
