@@ -13,7 +13,6 @@
     "dist:web": "node scripts/build-web.mjs",
     "electron": "electron .",
     "app": "electron .",
-    "icon": "electron scripts/make-icon.cjs",
     "dist": "electron-builder --win portable --x64",
     "list": "node src/cli.mjs list",
     "search": "node src/cli.mjs search",
