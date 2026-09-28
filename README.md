@@ -20,11 +20,18 @@
 
 ## Download
 
-1. Unter **[Releases](../../releases)** die neueste `Animora-<version>-win-x64.zip` herunterladen.
-2. Entpacken.
-3. **`Animora.cmd`** doppelklicken.
+**Einfach:** Unter **[Releases](../../releases)** `Animora.exe` herunterladen und doppelklicken.
+Beim ersten Start wird die App einmalig nach `%LOCALAPPDATA%\Animora` entpackt, danach startet sie sofort.
+
+**Alternativ (ZIP):** `Animora-<version>-win-x64.zip` entpacken und **`Animora.cmd`** doppelklicken.
 
 Windows 10/11 (x64). Keine Installation nötig.
+
+## Player
+
+- **Intro überspringen** – automatisch, wenn die Quelle Intro-Zeiten liefert, sonst per Knopf (+85 s). Taste `S`.
+- **Nächste Folge** – Knopf oben im Player und gegen Ende der Folge; nach dem Ende startet sie nach 8 s automatisch (abbrechbar). Taste `N`.
+- Beides in den Einstellungen abschaltbar.
 
 ## Lizenz
 

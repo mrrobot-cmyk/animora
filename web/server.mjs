@@ -83,6 +83,8 @@ function toPlayback(data) {
   const streamType = stream.streamType || stream.kind || (/\.m3u8(?:[?#]|$)/i.test(url) ? "hls" : "mp4");
   const subtitle = pickSubtitle(data);
   return {
+    intro: skipRange(data, stream, "intro"),
+    outro: skipRange(data, stream, "outro"),
     url: proxied(url, headers),
     streamType,
     subtitle: subtitle ? proxied(subtitle, headers) : null,
@@ -92,6 +94,21 @@ function toPlayback(data) {
       url: proxied(s.url || s.file, headers),
     })).filter((s) => s.url) : [],
   };
+}
+
+// Intro/Outro-Zeiten vereinheitlichen. Module liefern sie unterschiedlich:
+// { intro: { start, end } } (AnimeKai) oder introStartSeconds/introEndSeconds (Anikage).
+function skipRange(data, stream, key) {
+  for (const src of [stream, data]) {
+    if (!src || typeof src !== "object") continue;
+    const node = src[key];
+    let start, end;
+    if (node && typeof node === "object") { start = Number(node.start); end = Number(node.end); }
+    else { start = Number(src[`${key}StartSeconds`]); end = Number(src[`${key}EndSeconds`]); }
+    if (!Number.isFinite(start) || start < 0) start = 0;
+    if (Number.isFinite(end) && end > start + 5) return { start, end };
+  }
+  return null;
 }
 
 // ---------- HLS/Medien-Proxy (setzt die von der Quelle verlangten Header) ----------

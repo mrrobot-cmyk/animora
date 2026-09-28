@@ -14,6 +14,8 @@ const DEFAULT_SETTINGS = {
   subtitles: true,
   resume: true,
   fullscreen: false,
+  autoSkipIntro: true,
+  autoNext: true,
 };
 
 function defaults() {
@@ -41,6 +43,8 @@ function sanitizeSettings(settings) {
     subtitles: settings.subtitles !== false,
     resume: settings.resume !== false,
     fullscreen: settings.fullscreen === true,
+    autoSkipIntro: settings.autoSkipIntro !== false,
+    autoNext: settings.autoNext !== false,
   };
 }
 

@@ -87,7 +87,9 @@ const SettingsPage = {
         settingRow("Fortsetzen, wo du aufgehört hast", "Startet eine angefangene Episode an der zuletzt gespeicherten Position.", makeToggle("resume")),
         settingRow("Im Vollbild starten", web
           ? "Der Player öffnet sich direkt im Vollbild. Beenden mit Esc."
-          : "mpv öffnet sich direkt im Vollbild. Beenden mit Esc oder Doppelklick.", makeToggle("fullscreen"))),
+          : "mpv öffnet sich direkt im Vollbild. Beenden mit Esc oder Doppelklick.", makeToggle("fullscreen")),
+        settingRow("Intro automatisch überspringen", "Springt ans Ende des Intros, sobald die Quelle Intro-Zeiten liefert. Sonst erscheint ein „Intro überspringen“-Knopf.", makeToggle("autoSkipIntro")),
+        settingRow("Nächste Folge automatisch starten", "Am Ende einer Folge startet nach einem kurzen Countdown die nächste. Der Knopf „Nächste Folge“ ist immer verfügbar.", makeToggle("autoNext"))),
       h("section", { class: "settings-card" },
         h("h2", { class: "settings-heading", text: "Quelle" }),
         settingRow("Standardquelle", "Für Startseite, Suche und Katalog. Auch oben rechts umschaltbar.", moduleSelect)),
