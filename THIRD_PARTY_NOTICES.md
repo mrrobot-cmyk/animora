@@ -9,6 +9,7 @@ Deren Lizenzen gelten unabhängig von der Lizenz von Animora.
 | Node.js (`node.exe`) | `runtime/` im Release-Paket | MIT (Lizenztext: `runtime/LICENSE`) | https://nodejs.org |
 | Synthetiq-Module (AnimeKai, Anikage, Miruro) | `modules/` | siehe Quell-Repository | https://github.com/kas021/Synthetiq-Modules |
 | miniz 3.0.2 | `launcher/` (in `Animora.exe`) | MIT (`launcher/miniz-LICENSE`) | https://github.com/richgel999/miniz |
+| Microsoft Edge WebView2 SDK (`WebView2Loader.dll`, `WebView2.h`) | `runtime/` im Release, `launcher/` | BSD-3-Clause (`launcher/WebView2-LICENSE.txt`) | https://www.nuget.org/packages/Microsoft.Web.WebView2 |
 | mpv | nur Electron-Variante (`mpv/`, nicht im Repository) | GPL-2.0-or-later | https://mpv.io |
 | Electron | nur Electron-Variante | MIT | https://www.electronjs.org |
 

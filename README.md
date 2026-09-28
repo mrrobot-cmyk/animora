@@ -20,7 +20,7 @@
 
 ## Download
 
-**Einfach:** Unter **[Releases](../../releases)** `Animora.exe` herunterladen und doppelklicken.
+**Einfach:** Unter **[Releases](../../releases)** `Animora.exe` herunterladen und doppelklicken – Animora öffnet sich als eigene App in einem eigenen Fenster (WebView2, bei Windows 10/11 vorinstalliert).
 Beim ersten Start wird die App einmalig nach `%LOCALAPPDATA%\Animora` entpackt, danach startet sie sofort.
 
 **Alternativ (ZIP):** `Animora-<version>-win-x64.zip` entpacken und **`Animora.cmd`** doppelklicken.
