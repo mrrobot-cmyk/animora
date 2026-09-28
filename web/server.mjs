@@ -24,6 +24,10 @@ const BASE_PORT = Number(process.env.PORT) || 8620;
 const HOST = "127.0.0.1";
 // Ohne Lebenszeichen vom Fenster beendet sich der Server (Fenster geschlossen).
 const IDLE_EXIT_MS = 30000;
+// Von Animora.exe gestartet: die EXE zeigt die Oberfläche in ihrem eigenen
+// Fenster (WebView2). Der Server öffnet dann kein Browserfenster, sondern
+// meldet nur seine Adresse über stdout ("ANIMORA_URL <adresse>").
+const EMBEDDED = process.env.ANIMORA_EMBEDDED === "1";
 const STARTUP_GRACE_MS = 120000;
 
 function log(message) {
@@ -353,7 +357,9 @@ let lastPing = 0;
 const startedAt = Date.now();
 setInterval(() => {
   const idle = lastPing ? Date.now() - lastPing > IDLE_EXIT_MS : Date.now() - startedAt > STARTUP_GRACE_MS;
-  if (idle && process.env.ANIMORA_NO_OPEN !== "1") {
+  // Im eigenen Fenster (EMBEDDED) beendet Animora.exe den Server selbst; minimierte
+  // Fenster drosseln Timer, deshalb dort kein Beenden per fehlendem Ping.
+  if (idle && !EMBEDDED && process.env.ANIMORA_NO_OPEN !== "1") {
     log("Kein Fenster mehr offen – beende");
     process.exit(0);
   }
@@ -377,7 +383,8 @@ function listen(port, attempt = 0) {
     }
     if (await isAnimora(port)) {
       console.log("Animora läuft bereits – öffne Fenster.");
-      openWindow(`http://${HOST}:${port}/`);
+      if (EMBEDDED) console.log(`ANIMORA_URL http://${HOST}:${port}/`);
+      else openWindow(`http://${HOST}:${port}/`);
       setTimeout(() => process.exit(0), 1000);
       return;
     }
@@ -387,7 +394,9 @@ function listen(port, attempt = 0) {
     const address = `http://${HOST}:${port}/`;
     log(`Web-Server ${VERSION} gestartet auf ${address} pid=${process.pid}`);
     console.log(`Animora ${VERSION} läuft: ${address}`);
-    if (process.env.ANIMORA_NO_OPEN !== "1") {
+    if (EMBEDDED) {
+      console.log(`ANIMORA_URL ${address}`);
+    } else if (process.env.ANIMORA_NO_OPEN !== "1") {
       console.log("Das App-Fenster wird geöffnet. Schließen des Fensters beendet Animora.");
       openWindow(address);
     }

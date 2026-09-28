@@ -20,6 +20,7 @@
   flex-direction: column;
   background: #000;
 }
+#web-player:fullscreen .wp-frame { width: 100vw; height: 100vh; }
 #web-player .wp-bar {
   display: flex;
   align-items: center;
